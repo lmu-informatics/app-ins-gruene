@@ -22,7 +22,7 @@ android {
         applicationId "de.lmu.treeapp"
         minSdk 21
         targetSdk 34
-        versionCode System.getenv("BUILD_NUMBER") as Integer ?: 16
+        versionCode System.getenv("BUILD_NUMBER") as Integer ?: 18
         versionName version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

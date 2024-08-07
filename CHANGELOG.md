@@ -1,6 +1,10 @@
 # Changelog
 
 ## [Unreleased]
+
+## [1.0.0] - 2024-08-07
+- Initial stable release
+- Update repository link
 - Upgrade Gradle dependencies
 - Keep obfuscated source files and lines for debugging
 

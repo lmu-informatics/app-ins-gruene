@@ -1,6 +1,5 @@
-0.1.0-beta.2 - 2021-05-20
-- Fehler behoben, um in der Lizenz-Seite zurück zu navigieren
-- Hinzufügen einer Open Source Sektion in der "Über uns"-Seite
-- Kleinere Verbesserungen auf der Profil-Seite
+1.0.0 - 2024-08-07
+- Erste stabile Veröffentlichung
+- Aktualisiere Repository-Link 
+- Upgrade der Gradle-Abhängigkeiten
 - Behalte verschleierte Quelldateien und Zeilennummern für Debugging
-- Upgrade der App-Abhängigkeiten
