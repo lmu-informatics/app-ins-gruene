@@ -11,7 +11,7 @@ alt="Download from Google Play"
 height="80">](https://play.google.com/store/apps/details?id=de.lmu.treeapp)
 [<img src=".github/assets/direct-apk-download.png"
 alt="Direct apk download"
-height="80">](https://github.com/lmu-informatics/app-ins-gruene/releases/latest)
+height="80">](https://github.com/mimuc/app-ins-gruene/releases/latest)
 
 # Table of Contents
 - [About the App](#about-the-App)
@@ -57,13 +57,13 @@ cd path/to/your/directory
 ```
 - Clone the project: 
 ```
-git clone https://github.com/lmu-informatics/app-ins-gruene.git
+git clone https://github.com/mimuc/app-ins-gruene.git
 ```
 - Now you are able to open the project in Android Studio.
 
 ### How to contribute
-- Create an [issue](https://github.com/lmu-informatics/app-ins-gruene/issues), so we can discuss and monitor the topic.
-- You can check and manage the state of your issues in the [Issue-Board](https://github.com/lmu-informatics/app-ins-gruene/projects). 
+- Create an [issue](https://github.com/mimuc/app-ins-gruene/issues), so we can discuss and monitor the topic.
+- You can check and manage the state of your issues in the [Issue-Board](https://github.com/mimuc/app-ins-gruene/projects). 
 - Use the branch `master` as basis for a new branch `git checkout 123-my-issue`, where `123` is the issue number. Don't forget to update your master before checkout with `git pull origin master`.
 - Make your changes, consider formatting them with your IDE (e.g. `Ctrl+Alt+L` in IntelliJ / AndroidStudio).
 - Commit your changes, consider [cross-linking](https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue) the resolved issue with `(closes #123)` in your commit message.

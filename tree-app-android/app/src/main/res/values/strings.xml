@@ -174,8 +174,8 @@
     <string name="about_text_devs4">Cara Emberger \nCarmen Golling \nFabienne Daniela Lengweiler \nFlorentine Helmle \nJulian Lorenz \nMaya Czupor \nThomas Gerl \nThomas Puls</string>
     <string name="about_text_devs5">Florentine Helmle \nLisa Görtz \nMarie Irmer \nThomas Gerl</string>
     <string name="about_open_source_subtitle">Open Source</string>
-    <string name="about_open_source_text">Ihr könnt den Quelltext der App einsehen und selbst verwenden. Außerdem freuen wir uns über Verbesserungen und Beiträge auf GitHub: https://github.com/lmu-informatics/app-ins-gruene</string>
-    <string name="open_source_link">https://github.com/lmu-informatics/app-ins-gruene</string>
+    <string name="about_open_source_text">Ihr könnt den Quelltext der App einsehen und selbst verwenden. Außerdem freuen wir uns über Verbesserungen und Beiträge auf GitHub: https://github.com/mimuc/app-ins-gruene</string>
+    <string name="open_source_link">https://github.com/mimuc/app-ins-gruene</string>
 
     <!-- Licenses -->
     <string name="menu_licenses">Lizenzen</string>
