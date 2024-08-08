@@ -6,21 +6,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-
 import com.google.android.gms.common.util.ArrayUtils;
-
-import java.util.Locale;
-
 import de.lmu.treeapp.R;
 import de.lmu.treeapp.activities.minigames.base.GameActivity_Base;
 import de.lmu.treeapp.popup.Popup;
 import de.lmu.treeapp.popup.PopupAction;
 import de.lmu.treeapp.popup.PopupInterface;
 import de.lmu.treeapp.popup.PopupType;
+
+import java.util.Locale;
 
 public class GameActivity_SlidePuzzle extends GameActivity_Base implements PopupInterface, Runnable {
     DragDropGrid grid, gridFalse;
@@ -45,27 +41,6 @@ public class GameActivity_SlidePuzzle extends GameActivity_Base implements Popup
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_game__picture_puzzle);
-        Button helpButton = findViewById(R.id.helpImageButton);
-        Button continueButton = findViewById(R.id.continueButton);
-        doneButton = findViewById(R.id.game_picture_puzzle_sendButton);
-        Button falseTilesButton = findViewById(R.id.falseTilesButton);
-        imgView = findViewById(R.id.doneImage);
-        CardView helpView = findViewById(R.id.finishedImageView);
-        helpView.setVisibility(View.GONE);
-        doneButton.setVisibility(View.GONE);
-        popup = new Popup(this);
-        popup.setWinTitle(getString(R.string.slidepuzzle_wonderful));
-        doneButton.setOnClickListener(e -> {
-            setDone(true);
-            popup.showWithButtonText(PopupType.POSITIVE_ANIMATION, getString(R.string.popup_btn_finished), getString(R.string.popup_puzzle_won_text, time));
-        });
-
-        falseTilesButton.setOnClickListener(e -> gridFalse.markFalseTiles(grid.getFalseTiles()));
-
-        helpButton.setOnClickListener(e -> helpView.setVisibility(View.VISIBLE));
-        continueButton.setOnClickListener(e -> helpView.setVisibility(View.GONE));
-
         int treeId = parentTree.getId();
         if (ArrayUtils.contains(mwTrees, treeId)) {
             int imgM = selectImage(BlossomType.male);
@@ -85,6 +60,28 @@ public class GameActivity_SlidePuzzle extends GameActivity_Base implements Popup
     }
 
     public void startPuzzle(BlossomType type) {
+        setContentView(R.layout.activity_game__slide_puzzle);
+        doneButton = findViewById(R.id.game_slide_puzzle_sendButton);
+
+        Button helpButton = findViewById(R.id.helpImageButton);
+        Button continueButton = findViewById(R.id.continueButton);
+        Button falseTilesButton = findViewById(R.id.falseTilesButton);
+        imgView = findViewById(R.id.doneImage);
+        CardView helpView = findViewById(R.id.finishedImageView);
+        helpView.setVisibility(View.GONE);
+        doneButton.setVisibility(View.GONE);
+        popup = new Popup(this);
+        popup.setWinTitle(getString(R.string.slidepuzzle_wonderful));
+        doneButton.setOnClickListener(e -> {
+            setDone(true);
+            popup.showWithButtonText(PopupType.POSITIVE_ANIMATION, getString(R.string.popup_btn_finished), getString(R.string.popup_puzzle_won_text, time));
+        });
+
+        falseTilesButton.setOnClickListener(e -> gridFalse.markFalseTiles(grid.getFalseTiles()));
+
+        helpButton.setOnClickListener(e -> helpView.setVisibility(View.VISIBLE));
+        continueButton.setOnClickListener(e -> helpView.setVisibility(View.GONE));
+
         if (ArrayUtils.contains(mwTrees, treeId)) {
             getSupportFragmentManager().beginTransaction()
                     .detach(imageSelectFragment).commit();
@@ -113,7 +110,7 @@ public class GameActivity_SlidePuzzle extends GameActivity_Base implements Popup
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_game__picture_puzzle;
+        return R.layout.activity_game__slide_puzzle;
     }
 
     @Override
