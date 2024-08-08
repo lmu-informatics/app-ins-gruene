@@ -22,7 +22,7 @@ android {
         applicationId "de.lmu.treeapp"
         minSdk 21
         targetSdk 34
-        versionCode System.getenv("BUILD_NUMBER") as Integer ?: 16
+        versionCode System.getenv("BUILD_NUMBER") as Integer ?: 18
         versionName version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -42,10 +42,11 @@ android {
     }
     buildFeatures {
         dataBinding = true
+        buildConfig = true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     lint {
         disable 'MissingTranslation'
@@ -83,7 +84,7 @@ dependencies {
     implementation 'me.samlss:bloom:1.0.0'
     implementation 'uk.co.samuelwall:material-tap-target-prompt:3.1.0'
 
-    testImplementation 'junit:junit:4.13.1'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }

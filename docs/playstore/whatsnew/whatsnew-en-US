@@ -1,6 +1,5 @@
-0.1.0-beta.2 - 2021-05-20
-- Fix navigate up on Licenses page
-- Add Open Source Section in About page
-- Minor improvements in Profile page
+1.0.0 - 2024-08-07
+- Initial stable release
+- Update repository link
 - Upgrade Gradle dependencies
 - Keep obfuscated source files and lines for debugging
